@@ -9,10 +9,10 @@ def verificar_primeiro(lista):
     return lista[0]
 ```
 
-**Complexidade:** O(1)
+Complexidade: O(1)
 
-**Justificativa:**  
-O algoritmo apenas verifica se a lista está vazia e retorna o primeiro elemento. Não importa o tamanho da lista, o número de operações é sempre o mesmo.
+Justificativa:  
+O algoritmo só verifica se a lista está vazia e retorna o primeiro elemento. Não importa se a lista tem 1 ou mil elementos, ele sempre faz praticamente a mesma coisa.
 
 ---
 
@@ -26,10 +26,10 @@ def somar_lista(lista):
     return total
 ```
 
-**Complexidade:** O(n)
+Complexidade: O(n)
 
-**Justificativa:**  
-O algoritmo percorre todos os elementos da lista para somá-los. Assim, o número de operações cresce proporcionalmente ao tamanho da lista.
+Justificativa:  
+Aqui o algoritmo precisa percorrer todos os elementos da lista para fazer a soma. Então quanto maior a lista, mais vezes o loop vai rodar.
 
 ---
 
@@ -52,10 +52,10 @@ def busca_binaria(lista, alvo):
     return -1
 ```
 
-**Complexidade:** O(log n)
+Complexidade: O(log n)
 
-**Justificativa:**  
-A busca binária divide o intervalo de busca pela metade a cada iteração. Isso reduz rapidamente o espaço de busca, resultando em crescimento logarítmico.
+Justificativa:  
+A busca binária sempre divide a lista pela metade a cada passo. Então o número de verificações cresce bem devagar em relação ao tamanho da lista.
 
 ---
 
@@ -69,10 +69,10 @@ def pares_com_soma(lista, alvo):
                 print(lista[i], lista[j])
 ```
 
-**Complexidade:** O(n²)
+Complexidade: O(n²)
 
-**Justificativa:**  
-O algoritmo utiliza dois loops aninhados para verificar todos os pares possíveis da lista. Assim, o número de comparações cresce proporcionalmente a n × n.
+Justificativa:  
+Tem dois loops um dentro do outro verificando combinações de elementos. Por causa disso o número de comparações cresce bastante quando a lista aumenta.
 
 ---
 
@@ -81,20 +81,20 @@ O algoritmo utiliza dois loops aninhados para verificar todos os pares possívei
 ```python
 def imprimir_pares_e_soma(lista):
 
-    # Bloco 1: imprime cada elemento
+    # Bloco 1
     for i in range(len(lista)):
         print(lista[i])
 
-    # Bloco 2: imprime todos os pares
+    # Bloco 2
     for i in range(len(lista)):
         for j in range(len(lista)):
             print(lista[i], lista[j])
 ```
 
-**Complexidade:** O(n²)
+Complexidade: O(n²)
 
-**Justificativa:**  
-O primeiro loop percorre a lista uma vez (O(n)), mas o segundo possui dois loops aninhados (O(n²)). Como O(n²) cresce mais rápido, ele domina a complexidade total.
+Justificativa:  
+O primeiro loop percorre a lista uma vez. Já o segundo tem dois loops juntos, então ele cresce bem mais rápido. No final o que mais pesa é o O(n²).
 
 ---
 
@@ -108,10 +108,10 @@ def potencias_de_dois(n):
         i *= 2
 ```
 
-**Complexidade:** O(log n)
+Complexidade: O(log n)
 
-**Justificativa:**  
-A cada iteração o valor de i é multiplicado por 2. Isso faz com que o número de repetições cresça de forma logarítmica em relação ao valor de n.
+Justificativa:  
+A cada repetição o valor de i dobra. Então não cresce de forma linear, e sim mais devagar, até chegar perto de n.
 
 ---
 
@@ -124,10 +124,10 @@ def fibonacci_recursivo(n):
     return fibonacci_recursivo(n - 1) + fibonacci_recursivo(n - 2)
 ```
 
-**Complexidade:** O(2ⁿ)
+Complexidade: O(2ⁿ)
 
-**Justificativa:**  
-Cada chamada da função gera duas novas chamadas recursivas. Isso faz com que o número de chamadas cresça exponencialmente conforme n aumenta.
+Justificativa:  
+Cada chamada da função acaba gerando duas outras chamadas. Por isso o número de chamadas cresce muito rápido conforme o valor de n aumenta.
 
 ---
 
@@ -145,10 +145,10 @@ def ordenacao_bolha(lista):
     return lista
 ```
 
-**Complexidade:** O(n²)
+Complexidade: O(n²)
 
-**Justificativa:**  
-O Bubble Sort utiliza dois loops aninhados para comparar e trocar elementos da lista. No pior caso, ele precisa comparar praticamente todos os pares.
+Justificativa:  
+O Bubble Sort compara os elementos várias vezes usando dois loops. No pior caso ele acaba passando praticamente por todos os pares da lista.
 
 ---
 
@@ -166,10 +166,10 @@ def produto_de_matrizes(A, B, n):
     return C
 ```
 
-**Complexidade:** O(n³)
+Complexidade: O(n³)
 
-**Justificativa:**  
-O algoritmo utiliza três loops aninhados para calcular o produto das matrizes. Cada loop percorre n posições, resultando em n × n × n operações.
+Justificativa:  
+Tem três loops um dentro do outro para fazer o cálculo da multiplicação das matrizes. Então o número de operações cresce em n × n × n.
 
 ---
 
@@ -202,7 +202,7 @@ def merge_sort(lista):
     return resultado
 ```
 
-**Complexidade:** O(n log n)
+Complexidade: O(n log n)
 
-**Justificativa:**  
-O Merge Sort divide a lista em duas partes repetidamente (log n divisões) e depois percorre os elementos para fazer a junção (n operações). Por isso a complexidade final é n log n.
+Justificativa:  
+O Merge Sort divide a lista várias vezes até ficar bem pequena e depois junta tudo de novo ordenando. Por isso aparece a combinação de n com log n.
